@@ -1,0 +1,107 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>830</x><y>30</y><w>310</w><h>160</h></coordinates><panel_attributes>
+Veterinario
+--
+-String nome
+- String especialidad
+--
++ Veterinario(String nombre, String especialidad)
++ getNombre ()
++setNombre(String nombre)
++getEspecialidad()
++setListaClientes (String especialidad)
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>350</x><y>0</y><w>250</w><h>190</h></coordinates><panel_attributes>
+Veterinaria
+
+--
+-ArrayList&lt;Animal&gt; listaAnimales
+-ArrayList&lt;Clientes&gt; listaClientes
+--
++veterinaria()
++ agregarCliente (Cliente cliente)
++ agregarAnimal (Animal animal)
++asignarConsulta (Animal animal, Consulta consulta)
++imprimirConsultas ()
++getListaAnimales()
++setListaAnimales(ArrayList&lt;Animal&gt; listaAnimales)
++getListaClientes()
++setListaClientes (ArrayList&lt;Cliente&gt; listaClientes)
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>70</x><y>270</y><w>280</w><h>270</h></coordinates><panel_attributes>
+Animal
+--
+-String nombre
+-String especie
+-String raza
+-Cliente propietario
+-ArrayList&lt;Consulta&gt; historialConsultas
+--
++Animal(String nombre, String especie, String raza, Cliente propietario)
++agregarConsulta(Consulta consulta)
++getNombre()
++setNombre (String nombre)
++getEspecie()
++setEspecie(String Especie)
++getRaza()
++setRaza(String raza)
++getPropietario()
++setPropietario(Cliente propietario)
++getHistorialConsultas ()
++setHistorialConsultas (ArrayList&lt;Consulta&gt; historialConsultas)
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>810</x><y>250</y><w>310</w><h>290</h></coordinates><panel_attributes>
+Cliente
+--
+-String nombre
+-String direccion
+-String telefono
+-ArrayList&lt;Animal&gt; listaAnimales
+--
++Cliente(String nombre, String direccion, String telefono)
++agregarConsulta(Consulta consulta)
++getTelefono()
++setTelefono (String telefono)
++getDireccion()
++setDireccion(String direccion)
++getNombre()
++setNombre(String nombre)
++getListaAnimales ()
++setListaAnimales (ArrayList&lt;Animal&gt; listaAnimales)
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>560</y><w>410</w><h>300</h></coordinates><panel_attributes>
+Consulta
+--
+-String fecha
+-String motivo
+-String diagnostico
+-String tratamiento
+-Veterinario veterinario
+--
++Consulta(String fecha, String motivo, String diagnostico, String tratamiento, Veterinario veterinario)
++getFecha()
++setFecha (String fecha)
++getMotivo()
++setMotivo(String motivo)
++getDiegnostico()
++setDiagnostico(String diagnostico)
++getTratamiento()
++setTratamiento(String tratamiento)
++getVeterinario ()
++setVeterinario(Veterinario veterinario)
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>160</x><y>100</y><w>200</w><h>180</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=0..n
+atiende a&gt;</panel_attributes><additional_attributes>20;160;20;20;180;20</additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>70</y><w>240</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=1..n
+tiene &gt;</panel_attributes><additional_attributes>10;20;220;20</additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>380</y><w>470</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1..n
+m2=1..n
+pertenece a&gt;</panel_attributes><additional_attributes>10;20;450;20</additional_attributes></element><element><id>Relation</id><coordinates><x>460</x><y>200</y><w>350</w><h>140</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=0..1
+tiene &gt;</panel_attributes><additional_attributes>10;10;10;110;330;110</additional_attributes></element><element><id>Relation</id><coordinates><x>110</x><y>540</y><w>220</w><h>230</h></coordinates><panel_attributes>lt=-
+m1=1..1
+m2=0..n
+asiste a&gt;</panel_attributes><additional_attributes>10;10;10;200;200;200</additional_attributes></element></diagram>
